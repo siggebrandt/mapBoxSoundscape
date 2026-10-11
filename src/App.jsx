@@ -18,7 +18,7 @@ function App() {
             <boxGeometry />
             <meshStandardMaterial color="red" />
           </mesh>
-          <Gltf src="3d/HockeyArena.glb" position={[0, 0, 0]} />
+          <Gltf src="3d/HockeyComp.glb" position={[0, 0, 0]} />
           <OrbitControls />
         </Canvas>
       </div>
