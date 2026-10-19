@@ -1,6 +1,9 @@
 import { Map, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export default function MapComponent() {
   /* const BOUNDS = {
   west: 12.85,
@@ -17,7 +20,7 @@ const maxBounds = [
 */
   return (
     <Map
-      mapboxAccessToken="pk.eyJ1Ijoic3BlY3RyYXp6eiIsImEiOiJjbXZmY2t6ZmcwMDgzMnpyNnNtdndidjBxIn0.3KKvqZEE62eqpoZcFgUiJg"
+      mapboxAccessToken={apiKey}
       initialViewState={{
         /* bounds: maxBounds,  */ // visar hela området direkt
         fitBoundsOptions: {
@@ -32,7 +35,7 @@ const maxBounds = [
       }}
       /* maxBounds={maxBounds} */
       style={{ width: "100%", height: "100vh" }}
-      mapStyle="mapbox://styles/spectrazzz/cmvfd8jpo00eh01s69uxsfzfu"
+      mapStyle={apiUrl}
       maxPitch={85}
       minZoom={16}
       maxZoom={18}
