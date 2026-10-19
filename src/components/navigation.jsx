@@ -15,7 +15,7 @@ export default function Navigation() {
       <BackgroundSwitch />
       <div
         style={{
-          transform: "translateY(-50%)",
+          transform: "translateY(-50%)", // ??
           display: "flex",
           flexDirection: "column",
           gap: "20px",
