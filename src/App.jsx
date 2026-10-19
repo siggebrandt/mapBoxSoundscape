@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import StadiumMap from "./pages/stadiumMap";
+import { Stadium1, Stadium2, Stadium3 } from "./pages/pages";
+import BackgroundSwitch from "./components/backgroundSwitch";
+
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 
@@ -12,6 +17,18 @@ function App() {
   return (
     <>
       <div style={{ width: "100vw", height: "100vh" }}>
+        <BackgroundSwitch path={location.pathname} />
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<StadiumMap />}></Route>
+          <Route path="/1" element={<Stadium1 />}></Route>
+          <Route path="/2" element={<Stadium2 />}></Route>
+          <Route path="/3" element={<Stadium3 />}></Route>
+        </Routes>
+      </div>
+
+      {/* -- 3D view --
         <Canvas>
           <ambientLight intensity={1} />
           <mesh>
@@ -20,8 +37,7 @@ function App() {
           </mesh>
           <Gltf src="3d/HockeyComp.glb" position={[0, 0, 0]} />
           <OrbitControls />
-        </Canvas>
-      </div>
+        </Canvas> */}
     </>
   );
 }
