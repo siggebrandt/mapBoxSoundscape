@@ -1,12 +1,10 @@
 import { useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import StadiumMap from "./pages/stadiumMap";
 import { Stadium1, Stadium2, Stadium3 } from "./pages/pages";
-import BackgroundSwitch from "./components/backgroundSwitch";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
 import { Gltf } from "@react-three/drei";
 
 import "./App.css";
@@ -17,8 +15,6 @@ function App() {
   return (
     <>
       <div style={{ width: "100vw", height: "100vh" }}>
-        <BackgroundSwitch path={location.pathname} />
-
         {/* Routes */}
         <Routes>
           <Route path="/" element={<StadiumMap />}></Route>
