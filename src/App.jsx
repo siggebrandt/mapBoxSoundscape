@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import StadiumMap from "./pages/stadiumMap";
+import StadiumMap from "./pages/stadiumMap.jsx";
 import { Stadium1, Stadium2, Stadium3 } from "./pages/pages";
 
 import { Canvas } from "@react-three/fiber";
@@ -10,8 +10,6 @@ import { Gltf } from "@react-three/drei";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div style={{ width: "100vw", height: "100vh" }}>

@@ -10,9 +10,9 @@ export default function BackgroundSwitch() {
     document.querySelector("#root").style.background = "blue";
   } else if (location.pathname == "/3") {
     document.querySelector("#root").style.background = "green";
-  } else if (location.pathname == "/") {
-    document.querySelector("#root").style.background = "pink";
-  } else {
+  } /* else if (location.pathname == "/") {
+    document.querySelector("#root").style.background = "pink"; 
+  }*/ else {
     document.querySelector("#root").style.background = "";
   }
   return null;
