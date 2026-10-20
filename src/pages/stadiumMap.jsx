@@ -22,13 +22,13 @@ const maxBounds = [
     <Map
       mapboxAccessToken={apiKey}
       initialViewState={{
-        /* bounds: maxBounds,  */ // visar hela området direkt
+        /* bounds: maxBounds,  */
         fitBoundsOptions: {
-          padding: 40, // lite luft runt kanten
+          padding: 40,
           maxZoom: 15,
         },
-        longitude: 13.00073,
-        latitude: 55.60587,
+        longitude: 12.98772,
+        latitude: 55.5837,
         zoom: 16,
         pitch: 60,
         bearing: -20,

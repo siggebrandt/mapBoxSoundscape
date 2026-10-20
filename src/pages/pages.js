@@ -1,3 +1,9 @@
+import { Map, Source } from "react-map-gl/mapbox";
+import "mapbox-gl/dist/mapbox-gl.css";
+
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export function Stadium1() {
   return "stadium 1";
 }
