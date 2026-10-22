@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </div>
 
-      {/* -- 3D view --
+      {/* -- 3D view -- --
         <Canvas>
           <ambientLight intensity={1} />
           <mesh>
