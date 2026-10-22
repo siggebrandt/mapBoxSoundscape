@@ -29,7 +29,7 @@ const maxBounds = [
         },
         latitude: 57.70583,
         longitude: 11.98722,
-        zoom: 16,
+        zoom: 16.5,
         pitch: 60,
         bearing: -20,
       }}
