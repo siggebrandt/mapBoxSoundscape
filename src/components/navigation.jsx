@@ -21,9 +21,9 @@ export default function Navigation() {
           gap: "20px",
         }}
       >
-        <Link to="/1">STADIUM ONE</Link>
-        <Link to="/2">STADIUM TWO</Link>
-        <Link to="/3">STADIUM THREE</Link>
+        <Link to="/">STADIUM ONE</Link>
+        <Link to="/">STADIUM TWO</Link>
+        <Link to="/">STADIUM THREE</Link>
       </div>
     </div>
   );
