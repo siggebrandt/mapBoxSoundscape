@@ -64,3 +64,4 @@ const maxBounds = [
     </Map>
   );
 }
+
