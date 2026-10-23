@@ -37,8 +37,8 @@ const maxBounds = [
       style={{ width: "100%", height: "100vh" }}
       mapStyle={apiUrl}
       maxPitch={85}
-      minZoom={16}
-      maxZoom={18}
+      minZoom={17.5}
+      maxZoom={17.5}
       terrain={{
         source: "mapbox-dem",
         exaggeration: [
