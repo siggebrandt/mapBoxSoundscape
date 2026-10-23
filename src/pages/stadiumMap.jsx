@@ -29,9 +29,9 @@ const maxBounds = [
         },
         latitude: 57.70583,
         longitude: 11.98722,
-        zoom: 16.5,
+        zoom: 17.5,
         pitch: 60,
-        bearing: -20,
+        bearing: -45,
       }}
       /* maxBounds={maxBounds} */
       style={{ width: "100%", height: "100vh" }}
@@ -64,4 +64,3 @@ const maxBounds = [
     </Map>
   );
 }
-
