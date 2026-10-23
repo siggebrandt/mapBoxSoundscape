@@ -58,6 +58,7 @@ export default function MapComponent() {
           dragPan: false,
           dragRotate: false,
           touchPitch: false,
+          keyboard: false,
         }}
         maxBounds={maxBounds}
         style={{ width: "100%", height: "100vh" }}
