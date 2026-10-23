@@ -5,24 +5,24 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function MapComponent() {
-  /* const BOUNDS = {
-  west: 12.85,
-  south: 55.50,
-  east: 13.20,
-  north: 55.70,
-};
+  const BOUNDS = {
+    west: 12.85,
+    south: 55.5,
+    east: 13.2,
+    north: 55.7,
+  };
 
-// maxBounds i det format Mapbox vill ha
-const maxBounds = [
-  [BOUNDS.west, BOUNDS.south], // sydväst
-  [BOUNDS.east, BOUNDS.north], // nordost
-];
-*/
+  // maxBounds i det format Mapbox vill ha
+  const maxBounds = [
+    [11.986329554910906, 57.705351061645246], // sydväst
+    [11.988443118214601, 57.70644723615407], // nordost
+  ];
+
   return (
     <Map
       mapboxAccessToken={apiKey}
       initialViewState={{
-        /* bounds: maxBounds,  */
+        /* bounds: maxBounds, */
         fitBoundsOptions: {
           padding: 40,
           maxZoom: 15,
@@ -33,7 +33,7 @@ const maxBounds = [
         pitch: 60,
         bearing: -45,
       }}
-      /* maxBounds={maxBounds} */
+      maxBounds={maxBounds}
       style={{ width: "100%", height: "100vh" }}
       mapStyle={apiUrl}
       maxPitch={85}
