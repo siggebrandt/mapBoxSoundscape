@@ -21,9 +21,12 @@ export default function Navigation() {
           gap: "20px",
         }}
       >
-        <Link to="/" style={{ color: "black" }}>STADIUM ONE</Link>
-        <Link to="/" style={{ color: "black" }}>STADIUM TWO</Link>
-        <Link to="/" style={{ color: "black" }}>STADIUM THREE</Link>
+        <Link to="/" style={{ color: "black" }}>
+          GAMLA ULLLEVI
+        </Link>
+        <Link to="/" style={{ color: "black" }}>
+          Eleda Stadion
+        </Link>
       </div>
     </div>
   );

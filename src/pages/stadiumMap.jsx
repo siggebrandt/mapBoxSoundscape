@@ -4,6 +4,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiUrl = import.meta.env.VITE_API_URL;
+const apiUrl1 = import.meta.env.VITE_API_URL1;
 
 const ROTATE_SENSITIVITY = 0.5; // degrees of bearing per pixel dragged
 
@@ -62,7 +63,7 @@ export default function MapComponent() {
         }}
         maxBounds={maxBounds}
         style={{ width: "100%", height: "100vh" }}
-        mapStyle={apiUrl}
+        mapStyle={apiUrl1}
         maxPitch={85}
         minZoom={17.5}
         maxZoom={17.5}
