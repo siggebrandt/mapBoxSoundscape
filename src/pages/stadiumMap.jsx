@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Map, Source } from "react-map-gl/mapbox";
+import { Map, Source, Layer } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import mapBoxControls from "../components/mapBoxControls";
@@ -64,6 +64,25 @@ export default function MapComponent() {
           url="mapbox://mapbox.mapbox-terrain-dem-v1"
           tileSize={512}
           maxzoom={14}
+        />
+        {/* Manage 3D elements */}
+        <Layer
+          id="all-buildings"
+          source="composite"
+          source-layer="building"
+          type="fill-extrusion"
+          paint={{
+            "fill-extrusion-height": [
+              "case",
+              [
+                "in",
+                ["id"],
+                ["literal", [3114029, 104112635, "3114029", "104112635"]],
+              ],
+              22,
+              0,
+            ],
+          }}
         />
       </Map>
     </div>
