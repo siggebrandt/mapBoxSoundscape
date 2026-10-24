@@ -2,37 +2,16 @@ import { useRef } from "react";
 import { Map, Source } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
+import mapBoxControls from "../components/mapBoxControls";
+
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiUrl1 = import.meta.env.VITE_API_URL1;
 
-const ROTATE_SENSITIVITY = 0.5; // degrees of bearing per pixel dragged
-
 export default function MapComponent() {
   const mapRef = useRef(null);
-  const lastX = useRef(null);
 
-  const onPointerDown = (e) => {
-    if (e.button !== 0) return; // left button only
-    lastX.current = e.clientX;
-    e.currentTarget.setPointerCapture(e.pointerId);
-  };
-
-  const onPointerMove = (e) => {
-    if (lastX.current === null || !mapRef.current) return;
-    const dx = e.clientX - lastX.current;
-    lastX.current = e.clientX;
-
-    const map = mapRef.current.getMap();
-    map.jumpTo({ bearing: map.getBearing() + dx * ROTATE_SENSITIVITY });
-  };
-
-  const onPointerUp = (e) => {
-    lastX.current = null;
-    if (e.currentTarget.hasPointerCapture(e.pointerId)) {
-      e.currentTarget.releasePointerCapture(e.pointerId);
-    }
-  };
+  const mapPanning = mapBoxControls(mapRef);
 
   const maxBounds = [
     [11.979178662486545, 57.70559405517854], // sydväst
@@ -42,10 +21,7 @@ export default function MapComponent() {
   return (
     <div
       style={{ width: "100%", height: "100vh", touchAction: "none" }}
-      onPointerDown={onPointerDown}
-      onPointerMove={onPointerMove}
-      onPointerUp={onPointerUp}
-      onPointerCancel={onPointerUp}
+      {...mapPanning}
     >
       <Map
         ref={mapRef}

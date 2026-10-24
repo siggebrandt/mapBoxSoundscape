@@ -1,11 +1,6 @@
-import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import StadiumMap from "./pages/stadiumMap.jsx";
-import { Stadium1, Stadium2, Stadium3 } from "./pages/pages";
-
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { Gltf } from "@react-three/drei";
+import { Stadium1, Stadium2 } from "./pages/pages";
 
 import "./App.css";
 
@@ -16,22 +11,11 @@ function App() {
         {/* Routes */}
         <Routes>
           <Route path="/" element={<StadiumMap />}></Route>
-          <Route path="/1" element={<Stadium1 />}></Route>
-          <Route path="/2" element={<Stadium2 />}></Route>
-          <Route path="/3" element={<Stadium3 />}></Route>
+          <Route path="/ullevi" element={<Stadium1 />}></Route>
+          <Route path="/eleda" element={<Stadium2 />}></Route>
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
-
-      {/* -- 3D view -- --
-        <Canvas>
-          <ambientLight intensity={1} />
-          <mesh>
-            <boxGeometry />
-            <meshStandardMaterial color="red" />
-          </mesh>
-          <Gltf src="3d/HockeyComp.glb" position={[0, 0, 0]} />
-          <OrbitControls />
-        </Canvas> */}
     </>
   );
 }

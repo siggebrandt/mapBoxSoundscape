@@ -15,7 +15,7 @@ export default function Navigation() {
       <BackgroundSwitch />
       <div
         style={{
-          transform: "translateY(-50%)", // ??
+          transform: "translateY(-50%)",
           display: "flex",
           flexDirection: "column",
           gap: "20px",
@@ -25,7 +25,7 @@ export default function Navigation() {
           GAMLA ULLLEVI
         </Link>
         <Link to="/" style={{ color: "black" }}>
-          Eleda Stadion
+          ELEDA STADION
         </Link>
       </div>
     </div>
