@@ -34,8 +34,8 @@ export default function MapComponent() {
   };
 
   const maxBounds = [
-    [11.979180055846733, 57.70572028054365], // sydväst
-    [11.980975455955317, 57.706906312962154], // nordost
+    [11.979178662486545, 57.70559405517854], // sydväst
+    [11.980967290865511, 57.70688948944532], // nordost
   ];
 
   return (
@@ -50,8 +50,8 @@ export default function MapComponent() {
         ref={mapRef}
         mapboxAccessToken={apiKey}
         initialViewState={{
-          longitude: 11.980124,
-          latitude: 57.706276,
+          longitude: 11.979925726389924,
+          latitude: 57.706510496715524,
           zoom: 17.5,
           pitch: 60,
           bearing: -45,
