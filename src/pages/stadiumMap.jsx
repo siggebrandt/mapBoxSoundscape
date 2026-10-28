@@ -11,6 +11,34 @@ const apiUrl1 = import.meta.env.VITE_API_URL1;
 export default function MapComponent() {
   const mapRef = useRef(null);
 
+  const soundSpots = {
+    /* different spots */
+    "007": {
+      id: "007",
+      longitude: 11.97959214596796,
+      latitude: 57.70631167357664,
+      altitude: 45,
+    },
+    "010": {
+      id: "010",
+      longitude: 11.980266083740867,
+      latitude: 57.705760867556926,
+      altitude: 45,
+    },
+    "014": {
+      id: "014",
+      longitude: 11.980741257876506,
+      latitude: 57.70646431305478,
+      altitude: 45,
+    },
+    "018": {
+      id: "018",
+      longitude: 11.979948853707825,
+      latitude: 57.70673011007179,
+      altitude: 45,
+    },
+  };
+
   const mapPanning = mapBoxControls(mapRef);
 
   const maxBounds = [
@@ -25,6 +53,14 @@ export default function MapComponent() {
     >
       <Map
         ref={mapRef}
+        dragPan={false}
+        dragRotate={false}
+        doubleClickZoom={false}
+        scrollZoom={false}
+        boxZoom={false}
+        keyboard={false}
+        touchZoomRotate={false}
+        touchPitch={false}
         mapboxAccessToken={apiKey}
         initialViewState={{
           longitude: 11.979925726389924,
@@ -84,6 +120,7 @@ export default function MapComponent() {
             ],
           }}
         />
+        <RenderObject spots={soundSpots} color="#e63946" />
       </Map>
     </div>
   );
