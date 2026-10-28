@@ -1,12 +1,20 @@
 import { useRef } from "react";
 import { Map, Source, Layer } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
+import StadiumCutaway from "../components/stadiumCutAway";
+import StadiumVisibility from "../components/stadiumVisibility";
 
 import mapBoxControls from "../components/mapBoxControls";
+import RenderObject from "../components/renderObject";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiUrl1 = import.meta.env.VITE_API_URL1;
+
+const stadiumCoordinates = {
+  longitude: 11.979925726389924,
+  latitude: 57.706510496715524,
+};
 
 export default function MapComponent() {
   const mapRef = useRef(null);
@@ -17,25 +25,29 @@ export default function MapComponent() {
       id: "007",
       longitude: 11.97959214596796,
       latitude: 57.70631167357664,
-      altitude: 45,
+      altitude: 5,
+      color: "#e63946",
     },
     "010": {
       id: "010",
       longitude: 11.980266083740867,
       latitude: 57.705760867556926,
-      altitude: 45,
+      altitude: 5,
+      color: "#4ea8de",
     },
     "014": {
       id: "014",
       longitude: 11.980741257876506,
       latitude: 57.70646431305478,
-      altitude: 45,
+      altitude: 5,
+      color: "#80ed99",
     },
     "018": {
       id: "018",
       longitude: 11.979948853707825,
       latitude: 57.70673011007179,
-      altitude: 45,
+      altitude: 5,
+      color: "#ffd166",
     },
   };
 
@@ -63,8 +75,8 @@ export default function MapComponent() {
         touchPitch={false}
         mapboxAccessToken={apiKey}
         initialViewState={{
-          longitude: 11.979925726389924,
-          latitude: 57.706510496715524,
+          longitude: stadiumCoordinates.longitude,
+          latitude: stadiumCoordinates.latitude,
           zoom: 17.5,
           pitch: 60,
           bearing: -45,
@@ -121,6 +133,13 @@ export default function MapComponent() {
           }}
         />
         <RenderObject spots={soundSpots} color="#e63946" />
+        {/* <StadiumCutaway
+          center={[stadiumCoordinates.longitude, stadiumCoordinates.latitude]}
+          from={70}
+          to={150}
+          halfWidth={60}
+        /> */}
+        <StadiumVisibility hideFrom={200} hideTo={340} />
       </Map>
     </div>
   );
