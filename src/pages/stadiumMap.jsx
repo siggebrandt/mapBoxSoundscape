@@ -1,8 +1,6 @@
 import { useRef } from "react";
 import { Map, Source, Layer } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
-import StadiumCutaway from "../components/stadiumCutAway";
-import StadiumVisibility from "../components/stadiumVisibility";
 
 import mapBoxControls from "../components/mapBoxControls";
 import RenderObject from "../components/renderObject";
@@ -132,14 +130,7 @@ export default function MapComponent() {
             ],
           }}
         />
-        <RenderObject spots={soundSpots} color="#e63946" />
-        {/* <StadiumCutaway
-          center={[stadiumCoordinates.longitude, stadiumCoordinates.latitude]}
-          from={70}
-          to={150}
-          halfWidth={60}
-        /> */}
-        <StadiumVisibility hideFrom={200} hideTo={340} />
+        <RenderObject spots={soundSpots} />
       </Map>
     </div>
   );
