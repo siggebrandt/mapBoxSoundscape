@@ -76,7 +76,7 @@ export default function MapComponent() {
           longitude: stadiumCoordinates.longitude,
           latitude: stadiumCoordinates.latitude,
           zoom: 17.5,
-          pitch: 60,
+          pitch: 45,
           bearing: -45,
           dragPan: false,
           dragRotate: false,
