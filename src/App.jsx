@@ -11,8 +11,8 @@ function App() {
         {/* Routes */}
         <Routes>
           <Route path="/" element={<StadiumMap />}></Route>
-          <Route path="/ullevi" element={<Stadium1 />}></Route>
-          <Route path="/eleda" element={<Stadium2 />}></Route>
+          <Route path="/Ullevi" element={<Stadium1 />}></Route>
+          <Route path="/Eleda" element={<Stadium2 />}></Route>
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
