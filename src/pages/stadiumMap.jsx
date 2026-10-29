@@ -54,7 +54,7 @@ export default function MapComponent() {
         }}
         maxBounds={maxBounds}
         style={{ width: "100%", height: "100vh" }}
-        mapStyle={apiUrl1}
+        mapStyle={apiUrl}
         maxPitch={85}
         minZoom={17.5}
         maxZoom={17.5}
