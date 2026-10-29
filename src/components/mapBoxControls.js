@@ -1,3 +1,7 @@
+/* /// IMPLEMENT A COMPAS IN HERE
+      // MAP COMPASS
+      <div className="mapCompas"></div> */
+
 import { useRef } from "react";
 const ROTATE_SENSITIVITY = 0.5;
 const DRAG_THRESHOLD = 4; // pixlar innan det räknas som en drag

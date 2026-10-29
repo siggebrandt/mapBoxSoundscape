@@ -12,7 +12,6 @@ export default function Navigation() {
         zIndex: "2",
       }}
     >
-      <BackgroundSwitch />
       <div
         style={{
           transform: "translateY(-50%)",

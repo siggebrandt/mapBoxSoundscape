@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Map, Source, Layer } from "react-map-gl/mapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
+import ullevi from "../assets/json/ullevi.json";
 
 import mapBoxControls from "../components/mapBoxControls";
 import RenderObject from "../components/renderObject";
@@ -16,38 +17,6 @@ const stadiumCoordinates = {
 
 export default function MapComponent() {
   const mapRef = useRef(null);
-
-  const soundSpots = {
-    /* different spots */
-    "007": {
-      id: "007",
-      longitude: 11.97959214596796,
-      latitude: 57.70631167357664,
-      altitude: 5,
-      color: "#e63946",
-    },
-    "010": {
-      id: "010",
-      longitude: 11.980266083740867,
-      latitude: 57.705760867556926,
-      altitude: 5,
-      color: "#4ea8de",
-    },
-    "014": {
-      id: "014",
-      longitude: 11.980741257876506,
-      latitude: 57.70646431305478,
-      altitude: 5,
-      color: "#80ed99",
-    },
-    "018": {
-      id: "018",
-      longitude: 11.979948853707825,
-      latitude: 57.70673011007179,
-      altitude: 5,
-      color: "#ffd166",
-    },
-  };
 
   const mapPanning = mapBoxControls(mapRef);
 
@@ -130,7 +99,7 @@ export default function MapComponent() {
             ],
           }}
         />
-        <RenderObject spots={soundSpots} />
+        <RenderObject spots={ullevi.microphones} />
       </Map>
     </div>
   );

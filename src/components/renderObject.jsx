@@ -113,8 +113,8 @@ function createLayer({ id, spots, color, altitude, radius, map }) {
 
 export default function RenderObject({
   spots,
-  color = "#e63946",
-  altitude = 20,
+  color = "#000000",
+  altitude = 5,
   radius = 6,
 }) {
   const { current: mapRef } = useMap();
